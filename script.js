@@ -1,24 +1,21 @@
-// === Konfiguration ===
-const SRC_DIR = './src/';
-const SLIDE_MS = 5000;    // Anzeigedauer pro Bild
-const POLL_MS  = 5000;    // Wie oft nach neuen Bildern gesucht wird
-const EXTS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp'];
+// === Configuration ===
+const { SRC_DIR, SLIDE_MS, POLL_MS, EXTS } = SLIDESHOW_CONFIG;
 
-// === Elemente ===
+// === Elements ===
 const hud  = document.getElementById('hud');
 const A    = document.getElementById('A');
 const B    = document.getElementById('B');
 const imgA = document.getElementById('imgA');
 const imgB = document.getElementById('imgB');
 
-// === Zustände ===
+// === States ===
 let images = [];
 let idx = -1;
 let timer = null;
 let usingA = true;
 let firstRun = true;
 
-// === Hilfsfunktionen ===
+// === Helper functions ===
 const setHUD = text => hud.textContent = text;
 const cb = () => 'cb=' + Date.now(); // Cache-Buster
 
@@ -27,7 +24,7 @@ function isImageName(name) {
   return EXTS.some(e => lower.endsWith(e));
 }
 
-// Holt alle Bildnamen aus dem Autoindex-Listing
+// Get all picture names from Auto-Listing
 async function listDirViaAutoindex() {
   const res = await fetch(SRC_DIR + '?' + cb(), { cache: 'no-store' });
   if (!res.ok) throw new Error('Directory listing nicht erreichbar');
@@ -44,7 +41,7 @@ async function listDirViaAutoindex() {
   return files;
 }
 
-// Aktualisiert Bildliste
+// Updates image list
 async function fetchImages() {
   try {
     const list = await listDirViaAutoindex();
@@ -112,6 +109,6 @@ function startShow() {
   timer = setInterval(showNext, SLIDE_MS);
 }
 
-// === Initialisierung ===
+// === Initialization ===
 fetchImages();
 setInterval(fetchImages, POLL_MS);
