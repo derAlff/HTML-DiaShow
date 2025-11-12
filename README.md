@@ -11,11 +11,12 @@ New images added to `/src/` are detected automatically. ✨
 ---
 
 ## 🧱 Project Structure
+```
 /index.html
 /style.css
 /script.js
 /src/ ← put your images here (jpg, jpeg, png, gif, webp, bmp)
-
+```
 
 ---
 
@@ -108,10 +109,12 @@ Neu hinzugefügte Bilder in `/src/` werden automatisch erkannt. ✨
 ---
 
 ## 🧱 Projektstruktur
+```
 /index.html
 /style.css
 /script.js
 /src/ ← hier kommen deine Bilder hin (jpg, jpeg, png, gif, webp, bmp)
+```
 
 ---
 
