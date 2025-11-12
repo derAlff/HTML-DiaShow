@@ -35,7 +35,7 @@ New images added to `/src/` are detected automatically. ✨
 
    Upload all files (`index.html`, `style.css`, `script.js`)  
    and your image folder `src/` to your web server, e.g.:
-
+```
 /www/htdocs/.../your-domain/
 ├── index.html
 ├── style.css
@@ -44,6 +44,7 @@ New images added to `/src/` are detected automatically. ✨
 ├── image1.jpg
 ├── image2.png
 └── ...
+```
 
 2. **Enable Autoindex**
 
@@ -131,6 +132,7 @@ Neu hinzugefügte Bilder in `/src/` werden automatisch erkannt. ✨
    Lade alle Dateien (`index.html`, `style.css`, `script.js`)  
    sowie deinen Bilderordner `src/` auf deinen Webserver hoch, z. B.:
 
+```
 /www/htdocs/.../deine-domain/
 ├── index.html
 ├── style.css
@@ -139,6 +141,7 @@ Neu hinzugefügte Bilder in `/src/` werden automatisch erkannt. ✨
 ├── bild1.jpg
 ├── bild2.png
 └── ...
+```
 
 2. **Autoindex aktivieren**
 
